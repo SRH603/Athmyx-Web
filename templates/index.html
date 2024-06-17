@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athmyx Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="{{ url_for('home') }}">Athmyx</a></div>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li class="dropdown">
+                <a href="{{ url_for('products') }}">Products</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('ai') }}">AI</a>
+                    <a href="{{ url_for('game') }}">Game</a>
+                </div>
+            </li>
+            <li><a href="{{ url_for('blog') }}">Blog</a></li>
+            <li class="dropdown">
+                <a href="{{ url_for('apps') }}">Apps</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('app_a') }}">A</a>
+                    <a href="{{ url_for('app_b') }}">B</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="{{ url_for('support') }}">Support</a>
+                <div class="dropdown-content">
+                    <a href="{{ url_for('contact') }}">Contact Us</a>
+                    <a href="{{ url_for('about') }}">About</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <div class="hero">
+            <h1>Welcome to Athmyx</h1>
+            <p>Innovation and excellence at your fingertips.</p>
+        </div>
+    </header>
+    <main>
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="https://via.placeholder.com/300" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>Leading the industry.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>Unmatched performance.</p>
+                </div>
+                <div class="product">
+                    <img src="https://via.placeholder.com/300" alt="Product 3">
+                    <h3>Product 3</h3>
+                    <p>Revolutionary design.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Athmyx.</p>
+    </footer>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

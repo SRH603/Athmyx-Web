@@ -1,0 +1,14 @@
+"rewrites": [
+    {
+        "source": "/(.*)",
+        "destination": "/app.py"
+    }
+]
+"redirects": [
+    {
+        "source": "/privacy/",
+        "destination": "/announcement",
+        "permanent": false
+    }
+]
+"trailingSlash": true

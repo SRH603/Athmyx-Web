@@ -1,16 +1,23 @@
 {
-    "rewrites": [
+  "version": 2,
+  "builds": [
     {
-        "source": "/(.*)",
-        "destination": "/app.py"
+      "src": "api/app.py",
+      "use": "@vercel/python"
     }
-],
-"redirects": [
+  ],
+  "routes": [
     {
-        "source": "/privacy/",
-        "destination": "/announcement",
-        "permanent": false
+      "src": "/(.*)",
+      "dest": "api/app.py"
     }
-],
-"trailingSlash": true
+  ],
+  "redirects": [
+    {
+      "source": "/privacy/",
+      "destination": "/announcement",
+      "permanent": false
+    }
+  ],
+  "trailingSlash": true
 }

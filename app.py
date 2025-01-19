@@ -63,6 +63,16 @@ def scrolldown():
     return render_template('scroll down.html')
 
 
+@app.route('/CTB')
+def CTB():
+    return render_template('ctb.html')
+
+
+@app.route('/hello')
+def hello():
+    return render_template('hello.html')
+
+
 # 定义错误处理函数
 @app.errorhandler(404)
 def page_not_found(e):
